@@ -85,3 +85,30 @@ html {
         display: none;
     }
 }
+/* iPhone 11, 12, dan 13 (umumnya resolusi yang sama: 828px x 1792px, 1170px x 2532px) */
+@media only screen and (max-width: 430px) {
+    .bg-fixed {
+        background-attachment: scroll; /* Menghindari background terpotong */
+        background-size: cover; /* Menyesuaikan ukuran agar tidak terpotong */
+        background-position: center center;
+    }
+
+    .memories-container {
+        overflow-x: hidden; /* Menghindari tampilan terpotong */
+        padding: 10px; /* Menambahkan ruang agar konten tidak terlalu rapat */
+    }
+
+    img {
+        max-width: 100%; /* Memastikan gambar tidak melebihi lebar layar */
+        height: auto; /* Menjaga aspek rasio */
+        display: block;
+        margin: auto;
+    }
+
+    /* Menghindari animasi terlalu agresif */
+    .animate-float,
+    .animate-float-delayed,
+    .animate-float-slow {
+        animation-duration: 10s; /* Perpanjang durasi animasi agar lebih halus */
+    }
+}
